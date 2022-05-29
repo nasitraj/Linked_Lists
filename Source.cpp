@@ -1,7 +1,7 @@
 #include "List.h"
 #include "Stack.h"
 #include "Queue.h"
-#include <iostream>
+#include "HashTable.h"
 
 using namespace std;
 
@@ -76,4 +76,28 @@ int main() {
 	//list.SortSelection();
 	sortedlist.SortInsertion();
 	sortedlist.Display();
+
+
+
+	HashTable ht;
+
+	if (ht.isEmpty()) {
+		cout << "Hash table is empty" << endl;
+	}
+	else {
+		cout << "Table not empty" << endl;
+	}
+
+	ht.insert(905, "raj");
+	ht.insert(547, "viraj");
+	ht.insert(556, "rajvi");
+	ht.insert(854, "meet");
+	ht.insert(978, "yesha");
+	ht.insert(120, "pilu");
+	ht.insert(905, "nraj");
+
+	ht.printTable();
+
+	ht.remove(120);
+	ht.remove(128);
 }
